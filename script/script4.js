@@ -1,6 +1,5 @@
 //Дано целое число. 
 //Выяснить, является ли оно простым 
-//(простым называется число, большее 1, не имеющих других делителей кроме 1 и самого себя)
 
 const numberToCheck = parseInt(prompt("Enter a positive integer number: "),10);
 let isPrime = true;
