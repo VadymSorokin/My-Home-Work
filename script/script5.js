@@ -2,12 +2,37 @@
 //Определить, можно ли получить это число путем возведения 
 //числа 3 в некоторую степень. 
 //(Например, числа 9, 81 можно получить, а 13 - нельзя).
-const num5 = +prompt('enter number');
-const n = Math.log(num5) / Math.log(3);
-const nDeg = Math.trunc(n);
-if( Math.pow(3,nDeg)==num5){
-	console.log(`${num5} is result of 3^${nDeg}`);
+
+//Комментарий по заданию № 5
+
+//Довольно сложное решение и не очень хорошие названия для переменных. 
+//    Ответ: Названия переменных поправил согласно правил шариата ))
+//           Насчет сложности - ну тут кому как,мне было проще через логарифмы  это проделать.
+// 			 К сожалению, в JS  не нашёл способ вычисления обычного логарифма,
+// 			 поэтому пришлось применять натуральные логарифмы. А так бы было все намного проще. 
+// 			 И в этом методе не нужны циклы. Просто считает логарифм один раз и выдает ответ. Хоть миллиард вводи.
+
+//Так же здесь уместен коммент к заданию № 3 про parseInt. -- поправил 
+//Попробуй переписать его используя  такое начало (exponent это число в которое возводим число 3):
+//    for (let exponent = 1; exponent <= integerNumber; exponent++) {}  -- Сделал ниже через цикл.
+
+//  --- Попробую ))))
+
+const numberInteger = parseInt(prompt('enter number'), 10);
+
+for (let i = 1; i <= numberInteger; i++) {
+	if (Math.pow(3, i) == numberInteger) {
+		console.log(`${numberInteger} is result of 3^${i}`);
+		break;
+	}
+};
+
+//Через логарифмы
+
+/*const numberExponent = Math.trunc(Math.log(numberInteger) / Math.log(3));
+if( Math.pow(3,numberExponent)==numberInteger){
+	console.log(`${numberInteger} is result of 3^${numberExponent}`);
 }
 else{
-	console.log('an incorrect input');
-}
+	console.log('ani incorrect input');
+}*/
